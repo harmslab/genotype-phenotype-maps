@@ -2,7 +2,7 @@
     "figure": "Aspergillus niger mutant growth rate (crn)",
     "authors": "J. Arjan G. M. de Visser, Su Chan Park, and Joachim Krug",
     "wildtype": "00000",
-    "log_transform": true,
+    "log_transform": false,
     "stdeviations": [
         0.018000000000000016,
         0.038500000000000034,

@@ -5,8 +5,8 @@
 "url": "http://jhered.oxfordjournals.org/content/101/suppl_1/S75.short",
 "journal":"Journal of Heredity",
 "wildtype": "111111",
-"log_transform": true,
-"mutations": 
+"log_transform": false,
+"mutations":
     {"0": ["1", "0"],
      "1": ["1", "0"],
      "2": ["1", "0"],

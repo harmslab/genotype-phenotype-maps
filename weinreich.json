@@ -79,7 +79,7 @@
         "11111"
     ],
     "journal": "Science",
-    "log_transform": true,
+    "log_transform": false,
     "mutations": {
         "0": [
             "0",

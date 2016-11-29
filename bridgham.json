@@ -4,7 +4,7 @@
 "url": "http://www.nature.com/nature/journal/v461/n7263/abs/nature08249.html",
 "journal":"Nature",
 "wildtype": "axyzw",
-"log_transform": true,
+"log_transform": false,
 "description": "phenotype is EC50 to Aldosterone",
 "mutations": {
     "0": ["a", "b"],
