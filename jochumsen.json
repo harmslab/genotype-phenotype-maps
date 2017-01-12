@@ -4,8 +4,17 @@
     "url" : "http://www.nature.com/articles/ncomms13002",
     "doi" : "10.1038/ncomms13002",
     "date" : "03 October 2016",
-    "description" : "MIC",
+    "description" : "Measurement is MIC with increasing concentrations of colistin.",
+    "wildtype" : "XXXXX",
+    "mutations" : {
+        "0" : ["X", "A"],
+        "1" : ["X", "B"],
+        "2" : ["X", "C"],
+        "3" : ["X", "D"],
+        "4" : ["X", "E"]
+    },
     "genotypes" : [
+        "XXXXX",
         "AXXXX",
         "XBXXX",
         "XXCXX",
@@ -36,7 +45,7 @@
         "ABXDE",
         "AXCDE",
         "XBCDE",
-        "ABCDE",
+        "ABCDE"
     ],
     "phenotypes" : [
         1,
@@ -44,7 +53,7 @@
         2,
         1,
         1,
-        1
+        1,
         16,
         16,
         2,
@@ -70,7 +79,7 @@
         128,
         256,
         32,
-        1024,
+        1024
     ],
     "stdeviations" : null,
     "n_replicates" : [
@@ -105,6 +114,6 @@
         3,
         3,
         3,
-        3,
-    ],
+        3
+    ]
 }
