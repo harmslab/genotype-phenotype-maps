@@ -1,6 +1,6 @@
 # Experimental datasets
 
-Each dataset has a `.txt` file with the raw data and a `.json` file with metadata. The textfile also has a header with the metadata, commented out with `#`. 
+Each dataset has a `.txt` file with the raw data and a `.json` file with metadata. The textfile also has a header with the metadata, commented out with `#`.
 
 The structure of the python metadata is:
 
@@ -11,14 +11,12 @@ The structure of the python metadata is:
     "authors": "author names ...",
     "url": "...",
     "journal": "journal name ...",
-    "columns": ["col 1 ...", "col 2 ...", "col 3 ...", ...],
-    "dtypes": {
-                "col 1": "python-<type>",
-                "col 2": "python-<type>",
-                "col 3": "python-<type>",
-              },
     "sep": "...",
-    "comment: "..."
+    "comment: "...",
+    "genotypes": [...],
+    "phenotypes": [...],
+    "stdeviations": [...],
+    "n_replicates": [...]
 }
 ```
 
