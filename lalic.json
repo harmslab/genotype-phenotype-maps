@@ -4,6 +4,8 @@
     "author" : "J. Lalic and S. F. Elena",
     "url" : "http://onlinelibrary.wiley.com/wol1/doi/10.1111/jeb.12748/full",
     "journal" : "Journal of Evolutionary Biology",
+    "wildtype": "00000",
+    "mutations" : {"0":["0","1"], "1":["0","1"], "2":["0","1"], "3":["0","1"], "4":["0","1"]},
     "genotypes" : [
         "00000",
         "10000",
@@ -102,5 +104,5 @@
         0.000,
         0.030,
         0.027,
-        0.010]    
+        0.010]
 }
