@@ -1,22 +1,7 @@
+import os as _os
 from .methods import load as _load
+from .methods import list_datasets as _list_datasets
 
-anderson = _load('anderson')
-bridgham = _load('bridgham')
-bridgham2 = _load('bridgham2')
-bridgham3 = _load('bridgham3')
-costanzo = _load('costanzo')
-dasilva = _load('dasilva')
-flynn1 = _load('flynn1')
-flynn2 = _load('flynn2')
-hall_diploid_growth = _load('hall_diploid_growth')
-hall_haploid_growth = _load('hall_haploid_growth')
-hall_mating_efficiency = _load('hall_mating_efficiency')
-hall_sporulation_efficiency = _load('hall_sporulation_efficiency')
-jochumsen = _load('jochumsen')
-khan = _load('khan')
-krug1 = _load('krug1')
-krug2 = _load('krug2')
-lalic = _load('lalic')
-palmer = _load('palmer')
-summers = _load('summers')
-weinreich= _load('weinreich')
+for f in _list_datasets():
+    name = _os.path.splitext(f)[0]
+    vars()[name] = _load(name)

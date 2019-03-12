@@ -1,4 +1,4 @@
-import pathlib
+import os, pathlib
 from gpmap import GenotypePhenotypeMap
 
 def get_dataset_dir():
@@ -14,6 +14,9 @@ def get_dataset_path(dataset):
     dataset_path = pathlib.Path(data_dir).joinpath(dataset)
     return str(dataset_path)
 
+def list_datasets():
+    path = get_dataset_dir()
+    return os.listdir(path)
 
 def load(name):
     """Loads a provide dataset."""
