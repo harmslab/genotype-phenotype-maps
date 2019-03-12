@@ -16,7 +16,8 @@ def get_dataset_path(dataset):
 
 def list_datasets():
     path = get_dataset_dir()
-    return os.listdir(path)
+    files = os.listdir(path)
+    return sorted([os.path.splitext(f)[0] for f in files])
 
 def load(name):
     """Loads a provide dataset."""

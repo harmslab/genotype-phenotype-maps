@@ -1,6 +1,7 @@
 import os, pathlib
-from ..methods import load, get_dataset_path, get_dataset_dir
+from ..methods import load, get_dataset_path, get_dataset_dir, list_datasets
 from gpmap import GenotypePhenotypeMap
+
 
 formats_to_ext = {
     'excel': 'xlsx',
@@ -68,6 +69,5 @@ def list(args):
     path = pathlib.Path(path)
 
     print("\nList of datasets:")
-    for f in sorted(path.iterdir()):
-        name = os.path.splitext(f.name)[0]
+    for name in sorted(list_datasets()):
         print("  {}".format(name))
