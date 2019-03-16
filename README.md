@@ -18,30 +18,41 @@ If you have a dataset you'd like to add to our list, let us know. You can open a
 ## Genotype-phenotype map file format
 
 Each dataset is stored in a JSON file with a particular format. Minimally, `genotype-phenotype-maps`
-expects a `"data"` field, and its value is a list of fields and values: `"genotypes"`, `"phenotypes"`, `"stdeviations"`, and `"n_replicates"`. This looks like:
+expects a `"data"` field, and its value is a list of fields and values: `"genotypes"`, `"phenotypes"`, `"stdeviations"`, and `"n_replicates"`. `genotype-phenotype-maps` will also look for a `"wildtype"` field that provides the reference genotype and a `"mutations"` field that lists the possible mutations at each site. If these fields are not included, they will be inferred.
+
+This resulting JSON file looks like:
 ```json
 {
+  "wildtype": "AA",
+  "mutations": {
+    0: ["A", "T"],
+    1: ["A", "T"], 
+  },
   "data": {
-    "genotypes": [],
-    "phenotypes": [],
-    "stdeviations": [],
-    "n_replicates": []
+    "genotypes": ["AA", "AT", "TA", "TT"],
+    "phenotypes": [0.5, 0.5, 0.8, 1.0],
+    "stdeviations": [0.1, 0.1, 0.1, 0.1],
+    "n_replicates": 1
   }
 }
 ```
 
-You can store metadata as other fields in the JSON file. The only required field is `"data"`.
+You can store other metadata about each dataset as extra fields in the JSON files.
 ```json
-{   
-  "filename": "my_dataset.json",
-  "title": "My dataset is the cool.",
-  "authors": "Alice, Bob, and Charlie",
-  "journal": "Nature",
-  "data" : {
-    "genotypes": [],
-    "phenotypes": [],
-    "stdeviations": [],
-    "n_replicates": []
+{
+  "source": "url to the dataset",
+  "journal": "Nature Genetics", 
+  "authors": ["Alice", "Bob", "Charlie"],
+  "wildtype": "AA",
+  "mutations": {
+    0: ["A", "T"],
+    1: ["A", "T"], 
+  },
+  "data": {
+    "genotypes": ["AA", "AT", "TA", "TT"],
+    "phenotypes": [0.5, 0.5, 0.8, 1.0],
+    "stdeviations": [0.1, 0.1, 0.1, 0.1],
+    "n_replicates": 1
   }
 }
 ```

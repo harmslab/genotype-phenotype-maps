@@ -24,7 +24,8 @@ VERSION = None
 REQUIRED = [
     "numpy",
     "scipy",
-    "pandas"
+    "pandas",
+    "gpmap>=0.6"
 ]
 
 # The rest you shouldn't have to touch too much :)
