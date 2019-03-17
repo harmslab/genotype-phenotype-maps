@@ -14,10 +14,12 @@ def get_dataset_path(dataset):
     dataset_path = pathlib.Path(data_dir).joinpath(dataset)
     return str(dataset_path)
 
+
 def list_datasets():
     path = get_dataset_dir()
     files = os.listdir(path)
     return sorted([os.path.splitext(f)[0] for f in files])
+
 
 def load(name):
     """Loads a provide dataset."""
@@ -34,3 +36,8 @@ def read(filename, format, **kwargs):
     return gpm 
 
 
+def lazy_load(name):
+    """Pass a dataset name, return a callable that loads the datasets into a GenotypePhenotypeMap."""
+    def inner():
+        return load(name)
+    return inner
