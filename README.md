@@ -2,7 +2,7 @@
 
 Here, we're collecting a list of published, combinatorial genotype-phenotype maps.
 
-If you have a dataset you'd like to add to our list, let us know. You can open an issue here on Github, letting us know about your dataset, and we can discuss your dataset.
+If you have a dataset you'd like to add to our list, let us know. You can open an issue here, and we'll help you merge you're dataset into this repo.
 
 **Contents**
 
@@ -10,10 +10,6 @@ If you have a dataset you'd like to add to our list, let us know. You can open a
 * [How to use these datasets](#how-use-these-datasets)
 * [How to create an Excel file for one of the datasets](#how-to-create-an-excel-file-for-one-of-the-datasets)
 * [How to add my dataset to the list](#how-to-add-my-dataset-to-the-list)
-    * Excel data
-    * CSV Data
-    * JSON Data
-    * Other formats.
 
 ## Genotype-phenotype map file format
 
@@ -122,6 +118,7 @@ The `GenotypePhenotypeMap` is a flexible object for managing genotype-phenotype 
 ## How to create an Excel file for one of the datasets
 
 If [installed our Python command-line interface](), you export any dataset to an Excel file (or some other format) using the following command: 
+
 ```
 > genotype_phenotype_maps get weinreich
 
