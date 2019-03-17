@@ -25,8 +25,8 @@ This resulting JSON file looks like:
 {
   "wildtype": "AA",
   "mutations": {
-    0: ["A", "T"],
-    1: ["A", "T"], 
+    "0": ["A", "T"],
+    "1": ["A", "T"], 
   },
   "data": {
     "genotypes": ["AA", "AT", "TA", "TT"],
@@ -45,8 +45,8 @@ You can store other metadata about each dataset as extra fields in the JSON file
   "authors": ["Alice", "Bob", "Charlie"],
   "wildtype": "AA",
   "mutations": {
-    0: ["A", "T"],
-    1: ["A", "T"], 
+    "0": ["A", "T"],
+    "1": ["A", "T"], 
   },
   "data": {
     "genotypes": ["AA", "AT", "TA", "TT"],
@@ -87,8 +87,8 @@ You can now interact with these datasets two different ways.
 
 If you import a dataset in a Python session, `genotype-phenotype-maps` returns a [`GenotypePhenotypeMap`](https://github.com/harmslab/gpmap) object:  
 ```python
->>> import genotype_phenotype_maps
->>> gpm = genotype_phenotype_maps.weinreich
+>>> import genotype_phenotype_maps as datasets
+>>> gpm = datasets.weinreich()
 >>> gpm
 <gpmap.gpm.GenotypePhenotypeMap at 0x11b726128>
 ```
@@ -97,7 +97,26 @@ The `GenotypePhenotypeMap` is a flexible object for managing genotype-phenotype 
 ```python
 >>> import genotype_phenotype_maps
 >>> genotype_phenotype_maps.list_datasets()
-
+['anderson',
+ 'bridgham',
+ 'bridgham2',
+ 'bridgham3',
+ 'costanzo',
+ 'dasilva',
+ 'flynn1',
+ 'flynn2',
+ 'hall_diploid_growth',
+ 'hall_haploid_growth',
+ 'hall_mating_efficiency',
+ 'hall_sporulation_efficiency',
+ 'jochumsen',
+ 'khan',
+ 'krug1',
+ 'krug2',
+ 'lalic',
+ 'palmer',
+ 'summers',
+ 'weinreich']
 ```
 
 ## How to create an Excel file for one of the datasets
